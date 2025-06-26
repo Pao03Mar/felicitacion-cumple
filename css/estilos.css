@@ -159,7 +159,7 @@ body {
   }
 
   .grande {
-    font-size: 1.5em;
+    font-size: 1.9em; /* 🔧 antes 1.5em, ahora más legible en móvil */
   }
 
   .titulo-cumple {

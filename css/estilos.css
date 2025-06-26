@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  background-image: url("../images/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: #fff;
+}
+
+.mensaje-inicial {
+  padding-top: 80px;
+  animation: aparecer 2s ease;
+}
+
+#boton-sorpresa {
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: rebote 1s infinite alternate;
+}
+
+.felicitacion {
+  padding-top: 50px;
+  animation: aparecer 2s ease;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  animation: caer 4s linear infinite;
+  z-index: 10;
+}
+
+.globo {
+  position: absolute;
+  animation: flotar 6s linear infinite;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+@keyframes rebote {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes caer {
+  to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes flotar {
+  0% { bottom: -60px; }
+  100% { bottom: 100vh; }
+}
+#intro {
+  animation: deslizar-arriba 1.5s ease-out;
+}
+
+@keyframes deslizar-arriba {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#boton-sorpresa {
+  font-size: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative; /* 🔧 Esto permite mover el botón luego */
+  transition: all 0.3s ease;
+  z-index: 2;
+  animation: rebote 1s infinite alternate, girito 2s infinite linear;
+}
+
+@keyframes girito {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.letra {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: letra-aparece 0.6s forwards;
+  font-size: 1.5em;
+  margin: 2px;
+}
+
+.grande {
+  font-family: 'Comic Sans MS', cursive;
+  font-size: 2em;
+  color: #ffeb3b;
+  text-shadow: 2px 2px #000;
+}
+
+@keyframes letra-aparece {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mensaje-inicial p {
+  font-size: 1.3em;
+  line-height: 1.6;
+  color: #fff8dc;
+  font-style: italic;
+  text-shadow: 1px 1px 2px #000;
+  margin: 12px auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.titulo-cumple {
+  font-family: 'Segoe UI', sans-serif; /* O podés usar Quicksand si preferís algo más redondito */
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #ffb6c1;
+  text-shadow: 1px 1px 2px #000;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: letra-aparece 0.6s forwards;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .mensaje-inicial {
+    padding-top: 40px;
+  }
+
+  .mensaje-inicial p {
+    font-size: 1em;
+  }
+
+  #boton-sorpresa {
+    font-size: 1.6em;
+  }
+
+  .grande {
+    font-size: 1.5em;
+  }
+
+  .titulo-cumple {
+    font-size: 1.4em;
+  }
+
+  .felicitacion p {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  img.globo {
+    width: 80px !important;
+  }
+}

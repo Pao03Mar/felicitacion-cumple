@@ -169,4 +169,28 @@ body {
   img.globo {
     width: 80px !important;
   }
+  .titulo-inicial {
+  font-size: 2.2em;
+  line-height: 1.4;
+  padding: 0 12px;
+  text-align: center;
+  word-break: break-word;
+  white-space: normal;
+  text-shadow: 2px 2px 4px #000;
+  color: #ffeb3b;
+  }
+  #titulo-cumple {
+  font-size: 1.8em;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0 12px;
+  word-break: break-word;
+  white-space: normal;
+  text-shadow: 2px 2px 3px #000;
+  color: #ffb6c1;
+}
+
+.renglon {
+  display: block;
+}
 }

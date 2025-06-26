@@ -1,7 +1,7 @@
 // 💬 Efecto de letras animadas al cargar la primera pantalla
 window.addEventListener("DOMContentLoaded", () => {
   const contenedorMensaje = document.querySelector(".mensaje-inicial h1");
-  const texto = "Holiiiiiis🤗 desaparecidooo🧐0w0jsjs";
+  const texto = "Holiiiis🤗 desaparecido 🧐0w0jsjs";
   contenedorMensaje.innerHTML = "";
 
   [...texto].forEach((letra, i) => {
@@ -80,7 +80,7 @@ boton.addEventListener("click", () => {
 
   // ✨ Animación de letras para el título de cumpleaños
   const tituloCumple = document.getElementById("titulo-cumple");
-  const mensajeCumple = "🎉🎂¡Feliiiz cumpleaños DAVID!🎉🎂";
+  const mensajeCumple = "🎉🎂¡FELIIIZ CUPLEAÑOS DAVID!🎉🎂";
   tituloCumple.innerHTML = "";
 
   [...mensajeCumple].forEach((letra, i) => {

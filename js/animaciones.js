@@ -17,7 +17,15 @@ window.addEventListener("DOMContentLoaded", () => {
 let intentos = 0;
 const boton = document.getElementById("boton-sorpresa");
 
-boton.addEventListener("mouseover", () => {
+const frases = [
+  "¡Casi!",
+  "Uy no 😜",
+  "¿Otra vez vos?",
+  "Ni lo sueñes🤪",
+  "¡Me atrapás pero noup!"
+];
+
+function moverBoton() {
   if (intentos < 5) {
     const nuevaX = Math.random() * 80;
     const nuevaY = Math.random() * 60;
@@ -25,9 +33,22 @@ boton.addEventListener("mouseover", () => {
     boton.style.left = `${nuevaX}vw`;
     boton.style.top = `${nuevaY}vh`;
     intentos++;
-  }
-});
 
+    // Mostrar frase traviesa
+    boton.textContent = frases[intentos - 1] || "¡Ya está, clickeame!";
+    boton.style.color = "#00f4b5"; // Color amarillo para que se vea bien
+
+    // Volver al texto normal después de 1 segundo
+    setTimeout(() => {
+      boton.textContent = "Haz clic aquí 🎁";
+      boton.style.color = "#00f4ed";
+    }, 1000);
+  }
+}
+
+// Eventos para compu y celular
+boton.addEventListener("mouseover", moverBoton);   // Compu (cursor)
+boton.addEventListener("touchstart", moverBoton);  // Celular (dedo)
 // 🎉 Evento al hacer clic en el botón sorpresa
 boton.addEventListener("click", () => {
   document.getElementById("intro").style.display = "none";

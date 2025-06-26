@@ -16,13 +16,6 @@ body {
   animation: aparecer 2s ease;
 }
 
-#boton-sorpresa {
-  font-size: 2em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  animation: rebote 1s infinite alternate;
-}
 
 .felicitacion {
   padding-top: 50px;
@@ -83,10 +76,12 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  position: relative; /* 🔧 Esto permite mover el botón luego */
+  position: relative;
   transition: all 0.3s ease;
   z-index: 2;
   animation: rebote 1s infinite alternate, girito 2s infinite linear;
+  color: #3b89ff; /* 🌟 Amarillo vibrante */
+  text-shadow: 1px 1px 2px #000; /* Para que se vea bien sobre fondo claro u oscuro */
 }
 
 @keyframes girito {
